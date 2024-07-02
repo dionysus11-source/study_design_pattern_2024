@@ -16,9 +16,12 @@ public class HeatindexDisplay implements Observer, DisplayElement{
     }
 
     @Override
-    public void update(float t, float rh, float pressure) {
-        this.temperature = t;
-        this.humidity = rh;
+    public void update() {
+        temperature = weatherData.getTemperature();
+        humidity = weatherData.getHumidity();
+        float t = temperature;
+        float rh = humidity;
+
         heatindex = (float)
 				(
 				(16.923 + (0.185212 * t)) + 

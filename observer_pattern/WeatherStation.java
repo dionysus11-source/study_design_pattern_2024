@@ -9,7 +9,7 @@ public class WeatherStation {
         ForecastDisplay forecastDisplay = new ForecastDisplay(weatherData);
         HeatindexDisplay heatindexDisplay = new HeatindexDisplay(weatherData);
         
-        weatherData.registerObserver((temp, humidity, pressure) -> System.out.println("test"));
+        weatherData.registerObserver(() -> System.out.println("test"));
         weatherData.setMeasurements(80, 60, 30.4f);
         weatherData.setMeasurements(82, 70, 29.2f);
         weatherData.setMeasurements(78, 90, 29.2f);

@@ -7,29 +7,41 @@ public class WeatherData implements Subject {
    private float humidity;
    private float pressure;
    
-   public WeatherData(){
+   public WeatherData() {
     observers = new ArrayList<Observer>();
    }
 
-   public void registerObserver(Observer o){
+   public float getTemperature() {
+    return this.temperature;
+   }
+
+   public float getHumidity() {
+    return this.humidity;
+   }
+
+   public float getPressure() {
+    return this.pressure;
+   }
+
+   public void registerObserver(Observer o) {
     observers.add(o);
    }
 
-   public void removeObserver(Observer o){
+   public void removeObserver(Observer o) {
     observers.remove(o);
    }
 
-   public void notifyObservers(){
+   public void notifyObservers() {
     for (Observer observer : observers){
-        observer.update(temperature, humidity, pressure);
+        observer.update();
     }
    }
 
-   public void measurementsChanged(){
+   public void measurementsChanged() {
     notifyObservers();
    }
 
-   public void setMeasurements(float temperature, float humidity, float pressure){
+   public void setMeasurements(float temperature, float humidity, float pressure) {
     this.temperature = temperature;
     this.humidity = humidity;
     this.pressure = pressure;
