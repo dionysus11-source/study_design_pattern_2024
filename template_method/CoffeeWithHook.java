@@ -23,6 +23,8 @@ public class CoffeeWithHook extends CaffeineBeverageWithHook {
         } else {
             return false;
         }
+
+
     }
 
     private String getUserInput(){
@@ -40,5 +42,6 @@ public class CoffeeWithHook extends CaffeineBeverageWithHook {
             return "no";
         }
         return answer;
+    }
+    
 }
-
