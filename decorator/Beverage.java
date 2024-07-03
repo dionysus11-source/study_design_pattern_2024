@@ -16,7 +16,5 @@ public abstract class Beverage {
     public Size getSize() {
         return this.size;
     }
-    
-
     public abstract double cost();
 }
