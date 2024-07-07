@@ -1,4 +1,4 @@
-package headfirst.designpatterns.factory.pizzafm;
+package factory_method;
 
 public class ChicagoStyleVeggiePizza extends Pizza {
 	public ChicagoStyleVeggiePizza() {
