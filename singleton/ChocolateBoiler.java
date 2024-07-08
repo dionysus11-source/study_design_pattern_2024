@@ -1,27 +1,14 @@
 package singleton;
 
-public class ChocolateBoiler {
+public enum ChocolateBoiler {
+    UNIQUE_INSTANCE;
     private boolean empty;
     private boolean boiled;
-    private volatile static ChocolateBoiler uniqueInstance;
 
 
     private ChocolateBoiler() {
         empty = true;
         boiled = false;
-    }
-
-    public static ChocolateBoiler getInstance(){
-        if(uniqueInstance == null){
-            synchronized(ChocolateBoiler.class){
-                if(uniqueInstance == null){
-                    uniqueInstance = new ChocolateBoiler();
-                }
-            }
-        }
-
-        return uniqueInstance;
-
     }
 
     public void fill() {
