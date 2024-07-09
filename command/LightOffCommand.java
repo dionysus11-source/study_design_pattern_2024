@@ -11,5 +11,10 @@ public class LightOffCommand implements Command {
     public void excute() {
         light.off();
     }
+
+    @Override
+    public void undo() {
+        light.on();
+    }
     
 }
