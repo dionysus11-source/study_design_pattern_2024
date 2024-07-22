@@ -1,11 +1,15 @@
 package iterator;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MenutestDrive {
     public static void main(String args[]) {
-        PancakeHouseMenu pancakeHouseMenu = new PancakeHouseMenu();
-        DinnerMenu dinnerMenu = new DinnerMenu();
-
-        Waitless waitless = new Waitless(pancakeHouseMenu, dinnerMenu);
+        List<Menu> menus = new ArrayList<Menu>();
+        menus.add(new PancakeHouseMenu());
+        menus.add(new DinnerMenu());
+        menus.add(new CafeMenu());
+        Waitless waitless = new Waitless(menus);
         waitless.printMenu();
     }
     
