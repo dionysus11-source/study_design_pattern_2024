@@ -6,6 +6,8 @@ public class DinnerMenu {
     MenuItem[] menuItems;
     
     public DinnerMenu() {
+        menuItems = new MenuItem[MAX_ITEMS];
+        
         addItem(
             "채식주의자용 BLT",
              "통밀 위에 ㅌ콩고기 베이컨, 상추, 토마토를 얹은 메뉴",

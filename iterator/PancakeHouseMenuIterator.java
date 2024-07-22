@@ -4,9 +4,10 @@ import java.util.ArrayList;
 
 public class PancakeHouseMenuIterator implements Iterator {
     ArrayList<MenuItem> items;
-    int position;
+    int position = 0;
 
-    public PancakeHouseMenuIterator() {
+    public PancakeHouseMenuIterator(ArrayList<MenuItem> items) {
+        this.items = items;
     }
 
     @Override
