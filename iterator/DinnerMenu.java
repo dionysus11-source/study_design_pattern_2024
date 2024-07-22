@@ -1,13 +1,15 @@
 package iterator;
 
-public class DinnerMenu {
+import java.util.Iterator;
+
+public class DinnerMenu implements Menu {
     static final int MAX_ITEMS = 6;
     int numberOfItems = 0;
     MenuItem[] menuItems;
     
     public DinnerMenu() {
         menuItems = new MenuItem[MAX_ITEMS];
-        
+
         addItem(
             "채식주의자용 BLT",
              "통밀 위에 ㅌ콩고기 베이컨, 상추, 토마토를 얹은 메뉴",
@@ -38,7 +40,7 @@ public class DinnerMenu {
         }
     } 
 
-    public Iterator createIterator() {
+    public Iterator<MenuItem> createIterator() {
         return new DinnerMenuIterator(menuItems);
     }
 }
