@@ -6,31 +6,31 @@ public class GumballMachineTestDrive {
 
         System.out.println(gumbalMachine);
 
-        gumbalMachine.insertQuater();
+        gumbalMachine.insertQuarter();
         gumbalMachine.turnCrank();
 
         System.out.println(gumbalMachine);
 
-        gumbalMachine.insertQuater();
-        gumbalMachine.ejectQuater();
+        gumbalMachine.insertQuarter();
+        gumbalMachine.ejectQuarter();
         gumbalMachine.turnCrank();
 
         System.out.println(gumbalMachine);
 
-        gumbalMachine.insertQuater();
+        gumbalMachine.insertQuarter();
         gumbalMachine.turnCrank();
-        gumbalMachine.insertQuater();
+        gumbalMachine.insertQuarter();
         gumbalMachine.turnCrank();
-        gumbalMachine.ejectQuater();
+        gumbalMachine.ejectQuarter();
 
         System.out.println(gumbalMachine);
 
-        gumbalMachine.insertQuater();
-        gumbalMachine.insertQuater();
+        gumbalMachine.insertQuarter();
+        gumbalMachine.insertQuarter();
         gumbalMachine.turnCrank();
-        gumbalMachine.insertQuater();
+        gumbalMachine.insertQuarter();
         gumbalMachine.turnCrank();
-        gumbalMachine.insertQuater();
+        gumbalMachine.insertQuarter();
         gumbalMachine.turnCrank();
 
         System.out.println(gumbalMachine);
