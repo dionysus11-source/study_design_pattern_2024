@@ -9,26 +9,22 @@ public class SoldOutState implements State{
 
     @Override
     public void insertQuarter() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'insertQuarter'");
+        System.out.println("죄송합니다. 매진되었습니다.");
     }
 
     @Override
     public void ejectQuater() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'ejectQuater'");
+        System.out.println("동전을 반환할 수 없습니다. 동전을 넣지 않았습니다.");
     }
 
     @Override
     public void turnCrank() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'turnCrank'");
+        System.out.println("죄송합니다. 매진되었습니다.");
     }
 
     @Override
     public void dispense() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'dispense'");
+        System.out.println("알맹이를 내보낼 수 없습니다");
     }
     
 }

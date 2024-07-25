@@ -9,26 +9,27 @@ public class SoldState implements State {
 
     @Override
     public void insertQuarter() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'insertQuarter'");
+        System.out.println("알맹이를 내보내고 있습니다.");
     }
 
     @Override
     public void ejectQuater() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'ejectQuater'");
+        System.out.println("이미 알맹이를 뽑으셨습니다.");
     }
 
     @Override
     public void turnCrank() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'turnCrank'");
+        System.out.println("손잡이는 한번만 돌려주세요.");
     }
 
     @Override
     public void dispense() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'dispense'");
+        gumballMachine.releaseBall();
+        if (gumballMachine.getCount() > 0) {
+            gumballMachine.setState(gumballMachine.getNoQuaterState());
+        } else {
+            System.out.println("oops out of gumballs");
+            gumballMachine.setState(gumballMachine.getSoldOutState());
+        }
     }
-    
 }

@@ -63,6 +63,10 @@ public class GumballMachine {
         return this.soldState;
     }
 
+    public int getCount() {
+        return this.count;
+    }
+
     public void refill(int numGumBalls) {
 		this.count = numGumBalls;
 		state = noQuarterState;
