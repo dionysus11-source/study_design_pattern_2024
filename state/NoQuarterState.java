@@ -1,10 +1,9 @@
 package state;
 
-public class NoQuarterState implements State {
-    GumballMachine gumballMachine;
+public class NoQuarterState extends State {
 
     public NoQuarterState(GumballMachine gumballMachine) {
-        this.gumballMachine = gumballMachine;
+        super(gumballMachine);
     }
 
     @Override
@@ -12,20 +11,4 @@ public class NoQuarterState implements State {
         System.out.println("동전을 넣으셨습니다");
         gumballMachine.setState(gumballMachine.getHasQuaterState());
     }
-
-    @Override
-    public void ejectQuater() {
-        System.out.println("동전을 넣어주세요");
-    }
-
-    @Override
-    public void turnCrank() {
-        System.out.println("동전을 넣어주세요");
-    }
-
-    @Override
-    public void dispense() {
-        System.out.println("동전을 넣어주세요");
-    }
-    
 }

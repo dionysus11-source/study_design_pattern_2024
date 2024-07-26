@@ -1,10 +1,9 @@
 package state;
 
-public class SoldOutState implements State{
-    GumballMachine gumballMachine;
+public class SoldOutState extends State{
 
     public SoldOutState(GumballMachine gumballMachine) {
-        this.gumballMachine = gumballMachine;
+        super(gumballMachine);
     }
 
     @Override

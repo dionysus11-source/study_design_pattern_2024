@@ -2,12 +2,11 @@ package state;
 
 import java.util.Random;
 
-public class HasQuaterState implements State {
-    GumballMachine gumballMachine;
+public class HasQuaterState extends State {
     Random randomWinner = new Random(System.currentTimeMillis());
 
     public HasQuaterState(GumballMachine gumballMachine) {
-        this.gumballMachine = gumballMachine;
+        super(gumballMachine);
     }
 
     @Override
@@ -30,11 +29,6 @@ public class HasQuaterState implements State {
         } else {
             gumballMachine.setState(gumballMachine.getSoldState());
         }
-    }
-
-    @Override
-    public void dispense() {
-        System.out.println("알맹이를 내보낼 수 없습니다.");
     }
     
 }

@@ -1,21 +1,23 @@
 package state;
 
 public class GumballMachine {
-    State soldOutState;
-    State noQuarterState;
-    State hasQuarterState;
-    State soldState;
-    State winnerState;
+    static State soldOutState;
+    static State noQuarterState;
+    static State hasQuarterState;
+    static State soldState;
+    static State winnerState;
 
     State state;
     int count = 0;
 
     public GumballMachine(int count) {
-        soldOutState = new SoldOutState(this);
-        noQuarterState = new NoQuarterState(this);
-        hasQuarterState = new HasQuaterState(this);
-        soldState = new SoldState(this);
-        winnerState = new WinnerState(this);
+        if (soldOutState == null) {
+            soldOutState = new SoldOutState(this);
+            noQuarterState = new NoQuarterState(this);
+            hasQuarterState = new HasQuaterState(this);
+            soldState = new SoldState(this);
+            winnerState = new WinnerState(this);
+        }
 
         this.count = count;
         if (count > 0) {
@@ -35,7 +37,9 @@ public class GumballMachine {
 
     public void turnCrank() {
         state.turnCrank();
-        state.dispense();
+        if (state == winnerState || state == soldState) {
+            state.dispense();
+        }
     }
 
     void releaseBall(){
