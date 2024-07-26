@@ -1,9 +1,11 @@
 package proxy;
 
-public class SoldOutState extends State{
+public class SoldOutState implements State{
+    private static final long serialVersionUID = 2L;
+    transient GumballMachine gumballMachine;
 
     public SoldOutState(GumballMachine gumballMachine) {
-        super(gumballMachine);
+        this.gumballMachine = gumballMachine;
     }
 
     @Override
@@ -24,11 +26,6 @@ public class SoldOutState extends State{
     @Override
     public void dispense() {
         System.out.println("알맹이를 내보낼 수 없습니다");
-    }
-
-    @Override
-    public void refill() {
-        gumballMachine.setState(gumballMachine.getNoQuaterState());
     }
 
     public String toString() {

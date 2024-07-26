@@ -1,54 +1,24 @@
 package proxy;
 
+import java.rmi.Naming;
+
 public class GumballMachineTestDrive {
     public static void main(String[] args) {
+        GumballMachine gumballMachine = null;
         int count = 0;
 
         if(args.length < 2) {
             System.out.println("GumballMachine <name> <inventory");
             System.exit(1);
         }
-        count = Integer.parseInt(args[1]);
-        GumballMachine gumbalMachine = new GumballMachine(args[0], count);
-        GumballMonitor monitor = new GumballMonitor(gumbalMachine);
+        try {
+            count = Integer.parseInt(args[1]);
 
-        System.out.println(gumbalMachine);
-
-        gumbalMachine.insertQuarter();
-        gumbalMachine.turnCrank();
-
-        System.out.println(gumbalMachine);
-
-        gumbalMachine.insertQuarter();
-        gumbalMachine.ejectQuarter();
-        gumbalMachine.turnCrank();
-
-        System.out.println(gumbalMachine);
-
-        gumbalMachine.insertQuarter();
-        gumbalMachine.turnCrank();
-        gumbalMachine.insertQuarter();
-        gumbalMachine.turnCrank();
-        gumbalMachine.ejectQuarter();
-
-        System.out.println(gumbalMachine);
-
-        gumbalMachine.insertQuarter();
-        gumbalMachine.insertQuarter();
-        gumbalMachine.turnCrank();
-        gumbalMachine.insertQuarter();
-        gumbalMachine.turnCrank();
-        gumbalMachine.insertQuarter();
-        gumbalMachine.turnCrank();
-
-        System.out.println(gumbalMachine);
-
-        gumbalMachine.refill(5);
-        
-        System.out.println(gumbalMachine);
-
-        monitor.report();
-
+            gumballMachine = new GumballMachine(args[0], count);
+            Naming.rebind("//" + args[0] + "/gumballmachine", gumballMachine);
+        } catch (Exception e)  {
+            e.printStackTrace();
+        }
     }
     
 }

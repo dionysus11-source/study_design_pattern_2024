@@ -1,9 +1,11 @@
 package proxy;
 
-public class SoldState extends State {
+public class SoldState implements State {
+    private static final long serialVersionUID = 2L;
+    transient GumballMachine gumballMachine;
 
     public SoldState (GumballMachine gumballMachine) {
-        super(gumballMachine);
+        this.gumballMachine = gumballMachine;
     }
 
     @Override
@@ -15,5 +17,17 @@ public class SoldState extends State {
             System.out.println("oops out of gumballs");
             gumballMachine.setState(gumballMachine.getSoldOutState());
         }
+    }
+
+    @Override
+    public void insertQuarter() {
+    }
+
+    @Override
+    public void ejectQuater() {
+    }
+
+    @Override
+    public void turnCrank() {
     }
 }

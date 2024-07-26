@@ -2,11 +2,12 @@ package proxy;
 
 import java.util.Random;
 
-public class HasQuaterState extends State {
+public class HasQuaterState implements State {
     Random randomWinner = new Random(System.currentTimeMillis());
+    GumballMachine gumballMachine;
 
     public HasQuaterState(GumballMachine gumballMachine) {
-        super(gumballMachine);
+        this.gumballMachine = gumballMachine;
     }
 
     @Override
@@ -33,6 +34,10 @@ public class HasQuaterState extends State {
 
     public String toString() {
         return "동전 투입된 상태";
+    }
+
+    @Override
+    public void dispense() {
     }
     
 }

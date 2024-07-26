@@ -1,9 +1,11 @@
 package proxy;
 
-public class NoQuarterState extends State {
+public class NoQuarterState implements State {
+    private static final long serialVersionUID = 2L;
+    transient GumballMachine gumballMachine;
 
     public NoQuarterState(GumballMachine gumballMachine) {
-        super(gumballMachine);
+        this.gumballMachine = gumballMachine;
     }
 
     @Override
@@ -14,5 +16,17 @@ public class NoQuarterState extends State {
 
     public String toString() {
         return "동전 투입 대기 중";
+    }
+
+    @Override
+    public void ejectQuater() {
+    }
+
+    @Override
+    public void turnCrank() {
+    }
+
+    @Override
+    public void dispense() {
     }
 }
