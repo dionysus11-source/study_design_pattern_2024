@@ -15,7 +15,10 @@ public class GumballMachineTestDrive {
             count = Integer.parseInt(args[1]);
 
             gumballMachine = new GumballMachine(args[0], count);
-            Naming.rebind("//" + args[0] + "/gumballmachine", gumballMachine);
+            Naming.rebind("//" + "192.168.1.32" + "/gumballmachine", gumballMachine);
+            //Naming.rebind("//" + args[0] + "/gumballmachine", gumballMachine);
+            //Naming.rebind(args[0],gumballMachine);
+            System.out.println("GumballMachine이 레지스트리에 바인딩되었습니다: ");
         } catch (Exception e)  {
             e.printStackTrace();
         }
