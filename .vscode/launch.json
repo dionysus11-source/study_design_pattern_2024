@@ -6,9 +6,19 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MyRemoteImpl",
+            "request": "launch",
+            "mainClass": "proxy.MyRemoteImpl",
+            "projectName": "study_design_pattern_2024_66e19719"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
-            "args": ["chicago", 5],
+            "args": [
+                "chicago",
+                5
+            ],
             "mainClass": "${file}"
         }
     ]
