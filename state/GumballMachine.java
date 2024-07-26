@@ -54,23 +54,23 @@ public class GumballMachine {
     }
 
     public State getNoQuaterState() {
-        return this.noQuarterState;
+        return GumballMachine.noQuarterState;
     }
 
     public State getHasQuaterState() {
-        return this.hasQuarterState;
+        return GumballMachine.hasQuarterState;
     }
 
     public State getSoldOutState() {
-        return this.soldOutState;
+        return GumballMachine.soldOutState;
     }
 
     public State getSoldState() {
-        return this.soldState;
+        return GumballMachine.soldState;
     }
 
     public State getWinnerState() {
-        return this.winnerState;
+        return GumballMachine.winnerState;
     }
 
     public int getCount() {
