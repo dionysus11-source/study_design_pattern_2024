@@ -46,7 +46,7 @@ public class GumballMachine extends UnicastRemoteObject implements GumballMachin
         }
     }
 
-    void releaseBall(){
+    public void releaseBall(){
         System.out.println("알맹이를 내보내고 있습니다.");
         if (count > 0) {
             count = count - 1;

@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "GumballMonitorTestDrive",
+            "request": "launch",
+            "mainClass": "proxy.GumballMonitorTestDrive",
+            "projectName": "study_design_pattern_2024_9b00eaaa"
+        },
+        {
+            "type": "java",
             "name": "MyRemoteImpl",
             "request": "launch",
             "mainClass": "proxy.MyRemoteImpl",
