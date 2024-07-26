@@ -78,8 +78,9 @@ public class GumballMachine {
     }
 
     public void refill(int numGumBalls) {
-		this.count = numGumBalls;
-		state = noQuarterState;
+		this.count += numGumBalls;
+        System.out.println("The gumball machine was just refilled,\n its new count is " + this.count);
+        state.refill();
 	}
 
 	public String toString() {

@@ -34,6 +34,11 @@ public class GumballMachineTestDrive {
         gumbalMachine.turnCrank();
 
         System.out.println(gumbalMachine);
+
+        gumbalMachine.refill(5);
+        
+        System.out.println(gumbalMachine);
+
     }
     
 }
