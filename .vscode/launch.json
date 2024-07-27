@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "RestoreKynnseed",
+            "request": "launch",
+            "mainClass": "kynnseed.RestoreKynnseed",
+            "projectName": "study_design_pattern_2024_9b00eaaa"
+        },
+        {
+            "type": "java",
+            "name": "Kynseed",
+            "request": "launch",
+            "mainClass": "kynnseed.Kynseed",
+            "projectName": "study_design_pattern_2024_9b00eaaa"
+        },
+        {
+            "type": "java",
+            "name": "GumballMachineTestDrive",
+            "request": "launch",
+            "mainClass": "proxy.GumballMachineTestDrive",
+            "projectName": "study_design_pattern_2024_9b00eaaa"
+        },
+        {
+            "type": "java",
+            "name": "GumballMachineTestDrive",
+            "request": "launch",
+            "mainClass": "state.GumballMachineTestDrive",
+            "projectName": "study_design_pattern_2024_9b00eaaa"
+        },
+        {
+            "type": "java",
             "name": "GumballMonitorTestDrive",
             "request": "launch",
             "mainClass": "proxy.GumballMonitorTestDrive",
