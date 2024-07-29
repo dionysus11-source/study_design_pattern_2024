@@ -3,14 +3,15 @@ package combining;
 public class DuckSimulator {
     public static void main(String[] args) {
         DuckSimulator simulator = new DuckSimulator();
-        simulator.simulate();
+        AbstractDuckFactory duckFactory = new CountingDuckFactory();
+        simulator.simulate(duckFactory);
     }
 
-    void simulate() {
-        Quakable mallardDuck = new QuakCounter(new MallardDuck());
-        Quakable redheadDuck = new QuakCounter(new RedheadDuck());
-        Quakable duckCall = new QuakCounter(new DuckCall());
-        Quakable rubberDuck = new QuakCounter(new RubberDuck());
+    void simulate(AbstractDuckFactory duckFactory) {
+        Quakable mallardDuck =  duckFactory.createMallardDuck();
+        Quakable redheadDuck = duckFactory.createRedheadDuck();
+        Quakable duckCall = duckFactory.createDuckCall();
+        Quakable rubberDuck = duckFactory.createRubberDuck();
         Quakable gooseDuck = new GooseAdapter(new Goose());
 
         System.out.println("오리 시뮬레이션 게임");
