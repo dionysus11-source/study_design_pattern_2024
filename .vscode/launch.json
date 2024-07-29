@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MatchMakingTestDrive",
+            "request": "launch",
+            "mainClass": "dynamic_proxy.MatchMakingTestDrive",
+            "projectName": "study_design_pattern_2024_66e19719"
+        },
+        {
+            "type": "java",
             "name": "RestoreKynnseed",
             "request": "launch",
             "mainClass": "kynnseed.RestoreKynnseed",
