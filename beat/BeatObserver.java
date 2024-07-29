@@ -1,5 +1,5 @@
 package beat;
 
 public interface BeatObserver {
-    public void update();
+    public void updateBeat();
 }

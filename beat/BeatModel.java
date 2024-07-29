@@ -56,14 +56,14 @@ public class BeatModel implements BeatModelInterface, Runnable{
     private void notifyBeatObservers() {
         for (int i = 0 ; i < beatObservers.size(); ++i) {
             BeatObserver observer = beatObservers.get(i);
-            observer.update();
+            observer.updateBeat();
         }
     }
 
     private void notifyBPMObservers() {
         for(int i = 0 ; i < bpmObservers.size() ; ++i) {
             BPMObserver observer = bpmObservers.get(i);
-            observer.update();
+            observer.updateBPM();
         }
     }
 
