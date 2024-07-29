@@ -39,11 +39,11 @@ public class MatchMakingTestDrive {
         System.out.println("괴짜 지수 " + ownerProxy.getGeekRating());
     }
 
-	Person getPersonFromDatabase(String name) {
+	private Person getPersonFromDatabase(String name) {
 		return (Person)datingDB.get(name);
 	}
 
-    void initializeDatabase() {
+    private void initializeDatabase() {
 		Person joe = new PersonImpl();
 		joe.setName("kim java");
 		joe.setInterests("cars, computers, music");
@@ -57,14 +57,14 @@ public class MatchMakingTestDrive {
 		datingDB.put(kelly.getName(), kelly);
 	}
 
-    Person getOwnerProxy(Person person) {
+    private Person getOwnerProxy(Person person) {
         return (Person) Proxy.newProxyInstance(
             person.getClass().getClassLoader(),
             person.getClass().getInterfaces(),
             new OwnerInvocationHandler(person));
     }
     
-    Person getNoneOwnerProxy(Person person) {
+    private Person getNoneOwnerProxy(Person person) {
         return (Person) Proxy.newProxyInstance(
             person.getClass().getClassLoader(),
             person.getClass().getInterfaces(),
