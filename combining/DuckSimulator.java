@@ -33,6 +33,9 @@ public class DuckSimulator {
 
         flockofDucks.add(flockofMallards);
 
+        Quakologist quackologist = new Quakologist();
+        flockofDucks.registerObserver(quackologist);
+
         System.out.println("오리 시뮬레이션 게임: 전체 무리");
         simulate(flockofDucks);
 

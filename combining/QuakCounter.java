@@ -17,5 +17,15 @@ public class QuakCounter implements Quakable {
     public static int getQuacks() {
         return numberOfQuack;
     }
+
+    @Override
+    public void registerObserver(Observer observer) {
+        duck.registerObserver(observer);
+    }
+
+    @Override
+    public void notifyObservers() {
+        duck.notifyObservers();
+    }
     
 }

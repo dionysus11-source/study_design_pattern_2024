@@ -1,5 +1,5 @@
 package combining;
 
-public interface Quakable {
+public interface Quakable extends QuackObservable {
     public void quack();
 }
